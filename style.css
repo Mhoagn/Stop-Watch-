@@ -1,0 +1,117 @@
+body {
+  background: linear-gradient(25deg, #ff7e5f, #feb47b 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+.container {
+  background-color: #eee9e9;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 30px;
+  margin-bottom: 1.5rem;
+}
+
+.stopwatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.timer {
+  font-size: 40px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.05);
+  }
+}
+
+.timer span {
+  width: 110px;
+  display: inline-block;
+  text-align: center;
+}
+
+.control {
+  display: flex;
+  gap: 1rem;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #f25191;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #d72a76;
+}
+
+.laps {
+  width: 100%; /* Đặt chiều rộng của laps bằng 100% của container */
+  max-width: 100%; /* Đảm bảo laps không vượt quá chiều rộng của div cha */
+  align-items: center; /* Căn giữa các phần tử bên trong */
+  padding: 10px 0;
+}
+
+.lap-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+  max-height: 200px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+li {
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li soan {
+  font-weight: bold;
+}
